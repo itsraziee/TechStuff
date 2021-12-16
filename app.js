@@ -1,5 +1,5 @@
-const express = require('express');
-const expresLayouts = require('express-ejs-layouts');
+const express = require("express");
+const expresLayouts = require("express-ejs-layouts");
 const bcrypt = require("bcrypt");
 const passport = require("passport");
 const flash = require("express-flash");
@@ -17,106 +17,104 @@ initializePassport(
 
 const users = [];
 
- require('dotenv').config(); //storing database details
+require("dotenv").config(); //storing database details
 
-app.use(express.urlencoded( { extended: true} )); 
+app.use(express.urlencoded({ extended: true }));
 app.use(flash());
 app.use(
-    session({
-      secret: process.env.SESSION_SECRET,
-      resave: false,
-      saveUninitialized: false,
-    })
-  );
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+  })
+);
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(methodOverride("_method"));
-app.use(express.static('public'));
+app.use(express.static("public"));
 app.use(expresLayouts);
 
-app.set('layout', './layouts/main');
-app.set('view engine', 'ejs');
+app.set("layout", "./layouts/main");
+app.set("view engine", "ejs");
 
-const routes = require('./server/routes/techstuffRoutes.js');
-app.use('/', routes);
+const routes = require("./server/routes/techstuffRoutes.js");
+app.use("/", routes);
 
 //HOME
 app.get("/", checkAuthenticated, (req, res) => {
-    res.render("home.ejs");
-  });
-  
-  //LOGIN
-  app.get("/login", checkNotAuthenticated, (req, res) => {
-    res.render("login.ejs");
-  });
-  
-  app.post(
-    "/login",
-    checkNotAuthenticated,
-    passport.authenticate("local", {
-      successRedirect: "/",
-      failureRedirect: "/login",
-      failureFlash: true,
-    })
-  );
+  res.render("home.ejs");
+});
+
+//LOGIN
+app.get("/login", checkNotAuthenticated, (req, res) => {
+  res.render("login.ejs");
+});
+
+app.post(
+  "/login",
+  checkNotAuthenticated,
+  passport.authenticate("local", {
+    successRedirect: "/",
+    failureRedirect: "/login",
+    failureFlash: true,
+  })
+);
 //REGISTER
 app.get("/register", checkNotAuthenticated, (req, res) => {
-    res.render("register.ejs");
-  });
-  
-  app.post("/register", checkNotAuthenticated, async (req, res) => {
-    try {
-      const hashedPassword = await bcrypt.hash(req.body.password, 10);
-      users.push({
-        id: Date.now().toString(),
-        firstname: req.body.firstname,
-        middlename: req.body.middlename,
-        lastname: req.body.lastname,
-        email: req.body.email,
-        phone: req.body.phone,
-        street: req.body.street,
-        brgy: req.body.brgy,
-        mn: req.body.mn,
-        prov: req.body.prov,
-        gender: req.body.gender,
-        password: hashedPassword,
-      });
-      res.redirect("/login");
-    } catch {
-      res.redirect("/register");
-    }
-  });
+  res.render("register.ejs");
+});
 
-  //VIEW ALL
+app.post("/register", checkNotAuthenticated, async (req, res) => {
+  try {
+    const hashedPassword = await bcrypt.hash(req.body.password, 10);
+    users.push({
+      id: Date.now().toString(),
+      firstname: req.body.firstname,
+      middlename: req.body.middlename,
+      lastname: req.body.lastname,
+      email: req.body.email,
+      phone: req.body.phone,
+      street: req.body.street,
+      brgy: req.body.brgy,
+      mn: req.body.mn,
+      prov: req.body.prov,
+      gender: req.body.gender,
+      password: hashedPassword,
+    });
+    res.redirect("/login");
+  } catch {
+    res.redirect("/register");
+  }
+});
+
+//VIEW ALL
 app.get("/account", checkAuthenticated, (req, res) => {
   res.render("account.ejs");
 });
-  
-  //LOGOUT
-  app.delete("/logout", (req, res) => {
-    req.logout();
-    res.redirect("/login");
-  });
-  
-  //MIDDLEWARE
-  function checkAuthenticated(req, res, next) {
-    if (req.isAuthenticated()) {
-      return next();
-    }
-    res.redirect("/login");
-  }
-  
-  function checkNotAuthenticated(req, res, next) {
-    if (req.isAuthenticated()) {
-      return res.redirect("/");
-    }
-    next();
-  }
 
+//LOGOUT
+app.delete("/logout", (req, res) => {
+  req.logout();
+  res.redirect("/login");
+});
+
+//MIDDLEWARE
+function checkAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) {
+    return next();
+  }
+  res.redirect("/login");
+}
+
+function checkNotAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) {
+    return res.redirect("/");
+  }
+  next();
+}
 
 app.listen(port, () => console.log(`Listening to port ${port}`));
 //app.listen(3000);
-
 
 //SMARTPHONE
 app.get("/smartphone", checkAuthenticated, (req, res) => {
@@ -148,14 +146,14 @@ app.get("/REGISTRATION", checkAuthenticated, (req, res) => {
   res.render("REGISTRATION.ejs");
 });
 
-              //SMARTPHONE DESCRIPTION
+//SMARTPHONE DESCRIPTION
 
 //iPhone 12 Pro
 app.get("/iPhone12", checkNotAuthenticated, (req, res) => {
   res.render("iPhone12.ejs");
 });
 
-              //TABLET DESCRIPTION
+//TABLET DESCRIPTION
 
 //iPad Pro
 app.get("/iPadPro", checkNotAuthenticated, (req, res) => {
@@ -189,6 +187,7 @@ app.get("/HuaweiMatePad11", checkNotAuthenticated, (req, res) => {
 app.get("/HuaweiMatePadT10s", checkNotAuthenticated, (req, res) => {
   res.render("HuaweiMatePadT10s.ejs");
 });
+
 //Realme Pad
 app.get("/RealmePad", checkNotAuthenticated, (req, res) => {
   res.render("RealmePad.ejs");
