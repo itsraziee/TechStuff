@@ -17,12 +17,4 @@ router.get("/REGISTRATION", techstuffController.REGISTRATION);
 
 router.get("/iPhone12", techstuffController.iPhone12);
 
-router.get("/iPadPro", techstuffController.iPadPro);
-router.get("/iPad8", techstuffController.iPad8);
-router.get("/iPadAir", techstuffController.iPadAir);
-router.get("/iPadMini", techstuffController.iPadMini);
-router.get("/SamsungGalaxyTabS7", techstuffController.SamsungGalaxyTabS7);
-router.get("/SamsungGalaxyTabS5e", techstuffController.SamsungGalaxyTabS5e);
-router.get("/HuaweiMatePad11", techstuffController.HuaweiMatePad11);
-
 module.exports = router;

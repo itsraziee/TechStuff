@@ -37,25 +37,3 @@ exports.REGISTRATION = async (req, res) => {
 exports.iPhone12 = async (req, res) => {
   res.render("iPhone12", { title: "TechStuff" });
 };
-
-exports.iPadPro = async (req, res) => {
-  res.render("iPadPro", { title: "TechStuff" });
-};
-exports.iPad8 = async (req, res) => {
-  res.render("iPad8", { title: "TechStuff" });
-};
-exports.iPadAir = async (req, res) => {
-  res.render("iPadAir", { title: "TechStuff" });
-};
-exports.iPadMini = async (req, res) => {
-  res.render("iPadMini", { title: "TechStuff" });
-};
-exports.SamsungGalaxyTabS7 = async (req, res) => {
-  res.render("SamsungGalaxyTabS7", { title: "TechStuff" });
-};
-exports.SamsungGalaxyTabS5e = async (req, res) => {
-  res.render("SamsungGalaxyTabS5e", { title: "TechStuff" });
-};
-exports.HuaweiMatePad11 = async (req, res) => {
-  res.render("HuaweiMatePad11", { title: "TechStuff" });
-};
