@@ -187,8 +187,3 @@ app.get("/HuaweiMatePad11", checkNotAuthenticated, (req, res) => {
 app.get("/HuaweiMatePadT10s", checkNotAuthenticated, (req, res) => {
   res.render("HuaweiMatePadT10s.ejs");
 });
-
-//Realme Pad
-app.get("/RealmePad", checkNotAuthenticated, (req, res) => {
-  res.render("RealmePad.ejs");
-});
