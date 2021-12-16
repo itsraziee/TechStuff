@@ -146,20 +146,54 @@ app.get("/REGISTRATION", checkAuthenticated, (req, res) => {
   res.render("REGISTRATION.ejs");
 });
 
-//SMARTPHONE DESCRIPTION
-
-//iPhone 12 Pro
+////SMARTPHONE DESCRIPTION
+//iPhone XS Max
+app.get("/iPhone10", checkNotAuthenticated, (req, res) => {
+  res.render("iPhone10.ejs");
+});
+//iPhone 12 Pro Max
 app.get("/iPhone12", checkNotAuthenticated, (req, res) => {
   res.render("iPhone12.ejs");
 });
-
-//TABLET DESCRIPTION
-
-//iPad Pro
-app.get("/iPadPro", checkNotAuthenticated, (req, res) => {
-  res.render("iPadPro.ejs");
+//Samsung Galaxy Note20 5G
+app.get("/galaxynote20", checkNotAuthenticated, (req, res) => {
+  res.render("galaxynote20.ejs");
 });
-//iPad 8
+//Samsung Galaxy S21 Ultra 5G
+app.get("/galaxys21ultra", checkNotAuthenticated, (req, res) => {
+  res.render("galaxys21ultra.ejs");
+});
+//Huawei P40 Pro
+app.get("/huaweip40pro", checkNotAuthenticated, (req, res) => {
+  res.render("huaweip40pro.ejs");
+});
+//Huawei Y7a
+app.get("/huaweiy7a", checkNotAuthenticated, (req, res) => {
+  res.render("huaweiy7a.ejs");
+});
+//Realme GT Master Edition
+app.get("/gtmaster", checkNotAuthenticated, (req, res) => {
+  res.render("gtmaster.ejs");
+});
+//Realme 8 Pro
+app.get("/realme8pro", checkNotAuthenticated, (req, res) => {
+  res.render("realme8pro.ejs");
+});
+//Xiaomi 11T
+app.get("/xiaomi11t", checkNotAuthenticated, (req, res) => {
+  res.render("xiaomi11t.ejs");
+});
+//Xiaomi Redmi Note 10s
+app.get("/redminote10s", checkNotAuthenticated, (req, res) => {
+  res.render("redminote10s.ejs");
+});
+
+////TABLET DESCRIPTION
+//iPad Pro
+app.get("/iPadPro ", checkNotAuthenticated, (req, res) => {
+  res.render("iPadPro .ejs");
+});
+//iPad 8th Gen
 app.get("/iPad8", checkNotAuthenticated, (req, res) => {
   res.render("iPad8.ejs");
 });
@@ -167,7 +201,7 @@ app.get("/iPad8", checkNotAuthenticated, (req, res) => {
 app.get("/iPadAir", checkNotAuthenticated, (req, res) => {
   res.render("iPadAir.ejs");
 });
-//iPad Mini
+//iPad mini 6th Gen
 app.get("/iPadMini", checkNotAuthenticated, (req, res) => {
   res.render("iPadMini.ejs");
 });
@@ -186,4 +220,97 @@ app.get("/HuaweiMatePad11", checkNotAuthenticated, (req, res) => {
 //Huawei MatePad T 10s
 app.get("/HuaweiMatePadT10s", checkNotAuthenticated, (req, res) => {
   res.render("HuaweiMatePadT10s.ejs");
+});
+//Realme Pad
+app.get("/RealmePad", checkNotAuthenticated, (req, res) => {
+  res.render("RealmePad.ejs");
+});
+//Xiaomi Pad 5
+app.get("/xiaomiPad", checkNotAuthenticated, (req, res) => {
+  res.render("xiaomiPad.ejs");
+});
+
+////LAPTOP DESCRIPTION
+//MacBook Pro 13
+app.get("/MacBookPro", checkNotAuthenticated, (req, res) => {
+  res.render("MacBookPro.ejs");
+});
+//MacBook Air (M1)
+app.get("/MacbookAir", checkNotAuthenticated, (req, res) => {
+  res.render("MacbookAir.ejs");
+});
+//Acer Nitro 7
+app.get("/acerNitro7", checkNotAuthenticated, (req, res) => {
+  res.render("acerNitro7.ejs");
+});
+//Acer Swift 7
+app.get("/acerSwift7", checkNotAuthenticated, (req, res) => {
+  res.render("acerSwift7.ejs");
+});
+//Asus ROG Strix G15 G512LV-AZ042T
+app.get("/AsusStrix", checkNotAuthenticated, (req, res) => {
+  res.render("AsusStrix.ejs");
+});
+//Asus ROG GL502VM
+app.get("/AsusROG", checkNotAuthenticated, (req, res) => {
+  res.render("AsusROG.ejs");
+});
+//HP Spectre x360
+app.get("/HPspectre", checkNotAuthenticated, (req, res) => {
+  res.render("HPspectre.ejs");
+});
+//HP Elite x2 G4
+app.get("/HPelite", checkNotAuthenticated, (req, res) => {
+  res.render("HPelite.ejs");
+});
+//Huawei MateBook D 15
+app.get("/HuaweiD15", checkNotAuthenticated, (req, res) => {
+  res.render("HuaweiD15.ejs");
+});
+//Huawei MateBook X Pro 2021
+app.get("/HuaweiXpro", checkNotAuthenticated, (req, res) => {
+  res.render("HuaweiXpro.ejs");
+});
+
+
+////ACCESSORIES DESCRIPTION
+//AirPods Pro
+app.get("/airPodsPro", checkNotAuthenticated, (req, res) => {
+  res.render("airPodsPro.ejs");
+});
+//HomePod mini
+app.get("/homePod", checkNotAuthenticated, (req, res) => {
+  res.render("homePod.ejs");
+});
+//Apple MagSafe Charger
+app.get("/MagSafe", checkNotAuthenticated, (req, res) => {
+  res.render("MagSafe.ejs");
+});
+//Samsung Bluetooth Mouse Slim
+app.get("/SamsungMouse", checkNotAuthenticated, (req, res) => {
+  res.render("SamsungMouse.ejs");
+});
+//Samsung S Pen Fold Edition
+app.get("/SamsungSpen", checkNotAuthenticated, (req, res) => {
+  res.render("SamsungSpen.ejs");
+});
+//Samsung Galaxy Watch4
+app.get("/galaxyWatch4", checkNotAuthenticated, (req, res) => {
+  res.render("galaxyWatch4.ejs");
+});
+//Huawei Scale 3 Pro
+app.get("/Scale3Pro", checkNotAuthenticated, (req, res) => {
+  res.render("Scale3Pro.ejs");
+});
+//Apple Magic Keyboard
+app.get("/AppleKeyboard", checkNotAuthenticated, (req, res) => {
+  res.render("AppleKeyboard.ejs");
+});
+//Huawei Smart Keyboard
+app.get("/HuaweiKeyboard", checkNotAuthenticated, (req, res) => {
+  res.render("HuaweiKeyboard.ejs");
+});
+//Huawei 6700 mAh Power Bank
+app.get("/HuaweiPowerBank", checkNotAuthenticated, (req, res) => {
+  res.render("HuaweiPowerBank.ejs");
 });
