@@ -1,0 +1,29 @@
+<div class="row flex-lg-row-reverse align-items-center g-5 py-4 mb-4">
+    <div class="col-12 col-lg-6">
+        <h1 class="SIGNIN">Sign In</h1>
+            <% if (messages.error) { %>
+            <%= messages.error %>
+            <% } %>
+            <form action="/login" method="POST">
+            <div>
+                <label class="email-add"></label>
+                <input class="gmail" type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <br>
+            <div>
+                <label class="pin"></label>
+                <input class="password" type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <br>
+            <label class="sub"></label>
+            <button class="submit btn-primary btn-dark btn-lg px-4 me-md-2" type="submit" id="login" name="login">Login</button>
+            </form>
+            <br>
+
+        <a href="/register" class="dont-have-an-account">Don't have an account?</a>
+    </div>
+
+    <div class="col-12 col-lg-6">
+        <img src="/img/log.jpg" width="607" height="510" class="d-block mx-lg-auto img-fluid" loading="lazy" alt="Techie">
+    </div>
+</div>

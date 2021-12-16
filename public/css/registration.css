@@ -1,0 +1,163 @@
+:root{
+  --bs-font-sans-serif: 'Rubik', sans-serif;
+  --bs-font-sans-serif: 'Albra', sans-serif;
+}
+
+.d-block{
+  padding-top: 0%;
+}
+
+ .SIGNUP {
+  font-size: 2rem;
+  font-family: 'Albra', sans-serif;
+  text-align: center;
+  padding-top: 5%;
+  font-weight: bold;
+}
+
+.user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 10px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.input-box1 {
+  margin-bottom: 15px;
+  width: calc(100% / 3 - 10px);
+}
+.input-box1 .details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box1 input { /*do not remove the input*/
+  height: 40px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 0; /*dapat 0*/
+  padding-left: 15px;
+  border: 1px solid #ccc; /*border color sa each box*/
+  transition: all 0.3s ease;
+}
+.user-details .input-box1 input:focus,
+.user-details .input-box1 input:valid {
+  border-color: #5c5E60; /*border color pag mag hover*/
+}
+
+.user-details .input-box2 {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 10px);
+}
+.input-box2 .details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box2 input {
+  height: 40px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 0;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+.user-details .input-box2 input:focus,
+.user-details .input-box2 input:valid {
+  border-color: #5c5E60;
+}
+
+.user-details .input-box3 {
+  margin-bottom: 15px;
+  width: calc(100% / 4 - 10px);
+}
+.input-box3 .details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box3 input {
+  height: 40px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 0;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+.user-details .input-box3 input:focus,
+.user-details .input-box3 input:valid {
+  border-color: #5c5E60;
+}
+
+.user-details .input-box4 {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 10px);
+}
+.input-box4 .details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box4 input {
+  height: 40px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 0;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+.user-details .input-box4 input:focus,
+.user-details .input-box4 input:valid {
+  border-color: #5c5E60;
+}
+.user-details .input-box4 select {
+  color:#5c5E60;
+  height: 40px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 0;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+form .button {
+  height: 45px;
+  margin: 35px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+@media (max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+  form .user-details .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category {
+    width: 100%;
+  }
+  .content form .user-details {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+@media (max-width: 459px) {
+  .container .content .category {
+    flex-direction: column;
+  }
+}

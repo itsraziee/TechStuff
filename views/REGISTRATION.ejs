@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="registration.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="/register" method="POST">
+        <div class="user-details">
+          <div class="input-box1">
+            <span class="details">Firstname</span>
+            <input type="text" placeholder="firstname" required>
+          </div>
+          <div class="input-box1">
+            <span class="details">Middlename</span>
+            <input type="text" placeholder="middlename" required>
+          </div>
+          <div class="input-box1">
+            <span class="details">Lastname</span>
+            <input type="text" placeholder="lastname" required>
+          </div>
+          <div class="input-box2">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box2">
+            <span class="details">Phone Number</span>
+            <input type="text" placeholder="Enter your number" required>
+          </div>
+          <div class="input-box3">
+            <span class="details">Street</span>
+            <input type="text" placeholder="Street" required>
+          </div>
+          <div class="input-box3">
+            <span class="details">Barangay</span>
+            <input type="text" placeholder="Barangay" required>
+          </div>
+          <div class="input-box3">
+            <span class="details">Municipality</span>
+            <input type="text" placeholder="Municipality" required>
+          </div>
+          <div class="input-box3">
+            <span class="details">Province</span>
+            <input type="text" placeholder="Province" required>
+          </div>
+          <div class="input-box4">
+            <span class="details">Gender</span>
+            <select id="gender" class="details">
+              <option selected>Select Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+          <div class="input-box4">
+            <span class="details">Password</span>
+            <input type="text" placeholder="Enter your password" required>
+          </div>
+        </div>   
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
