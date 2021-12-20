@@ -1,3 +1,4 @@
+require("../models/database");//database
 /**
  * GET /
  * Homepage
@@ -30,11 +31,18 @@ exports.account = async (req, res) => {
   res.render("account", { title: "TechStuff" });
 };
 
-exports.REGISTRATION = async (req, res) => {
-  res.render("REGISTRATION", { title: "TechStuff" });
+exports.register = async (req, res) => {
+  res.render("register", { title: "TechStuff" });
 };
 
-// SMARTPHONES
+exports.login = async (req, res) => {
+  res.render("login", { title: "TechStuff" });
+};
+
+/**
+ * GET /
+ * Smartphones
+ */
 //iPhone XS Max
 exports.iPhone10 = async (req, res) => {
   res.render("iPhone10", { title: "TechStuff" });
@@ -76,7 +84,10 @@ exports.redminote10s = async (req, res) => {
   res.render("redminote10s", { title: "TechStuff" });
 };
 
-// TABLETS
+/**
+ * GET /
+ * Tablets
+ */
 //iPad Pro
 exports.iPadPro = async (req, res) => {
   res.render("iPadPro", { title: "TechStuff" });
@@ -118,7 +129,10 @@ exports.xiaomiPad = async (req, res) => {
   res.render("xiaomiPad", { title: "TechStuff" });
 };
 
-// LAPTOPS
+/**
+ * GET /
+ * Laptops
+ */
 //MacBook Pro 13
 exports.MacBookPro = async (req, res) => {
   res.render("MacBookPro", { title: "TechStuff" });
@@ -160,7 +174,10 @@ exports.HuaweiXpro = async (req, res) => {
   res.render("HuaweiXpro", { title: "TechStuff" });
 };
 
-// ACCESSORIES
+/**
+ * GET /
+ * Accessories
+ */
 //AirPods Pro
 exports.airPodsPro = async (req, res) => {
   res.render("airPodsPro", { title: "TechStuff" });

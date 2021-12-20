@@ -23,4 +23,5 @@ function initialize(passport, getUserByEmail, getUserById) {
     return done(null, getUserById(id));
   });
 }
+
 module.exports = initialize;

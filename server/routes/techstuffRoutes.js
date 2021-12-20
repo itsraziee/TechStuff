@@ -13,7 +13,8 @@ router.get("/laptop", techstuffController.laptop);
 router.get("/accessories", techstuffController.accessories);
 router.get("/viewAll", techstuffController.viewAll);
 router.get("/account", techstuffController.account);
-router.get("/REGISTRATION", techstuffController.REGISTRATION);
+router.get("/login", techstuffController.login);
+router.get("/register", techstuffController.register);
 
 // SMARTPHONES
 router.get("/iPhone10", techstuffController.iPhone10);
