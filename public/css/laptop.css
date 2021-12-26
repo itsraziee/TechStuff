@@ -34,3 +34,41 @@
   font-family: "Poppins", sans-serif;
   text-align: left;
 }
+
+
+
+
+.product-name{
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  padding-left: 15%;
+}
+
+.price{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 50;
+  font-size:1.5rem;
+  padding-left: 15%;
+}
+
+.description{
+  font-family: 'Poppins', sans-serif;
+  padding-left: 15%;
+  margin-top: 5%;
+}
+
+.paragraph{
+  font-family: 'Poppins', sans-serif;
+  padding-left: 15%;
+}
+
+
+
+.buttons{
+  font-family: 'Poppins', sans-serif;
+  padding-left: 15%;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+}
+

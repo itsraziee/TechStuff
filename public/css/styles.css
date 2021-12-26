@@ -1,26 +1,17 @@
 :root{
-    --bs-font-sans-serif: 'Rubik', sans-serif;
     --bs-font-sans-serif: 'Albra', sans-serif;
 }
-/*
-.display-5{
-    color: #5c5E60;
-}
-*/
 .btn{
     border-radius: 0px;
     font-family: 'Poppins', sans-serif;
 }
 
-.nav-link {
-    font-family: 'Poppins', sans-serif;
-}
-.form-control{
-    font-family: 'Poppins', sans-serif;
-}
+.nav-link,
+.form-control,
 .lead{
     font-family: 'Poppins', sans-serif;
 }
+
 
 /*Products*/
 
@@ -62,3 +53,109 @@
     font-family: 'Poppins', sans-serif;
     text-align: center;
 }
+
+
+/*footer*/
+
+footer{
+	width: 100%;
+	/* position: absolute; */
+	/* bottom: 0; */
+	color:#ffff;
+	padding: 100px 0 30px;
+	/* border-top-left-radius: 125px; */
+	font-size: 13px;
+	line-height: 5px;
+	font-family: 'Poppins', sans-serif;
+	padding-left: 50%;
+	padding-top: 5%;
+}
+.row-row{
+	width:85%;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content:space-between;
+}
+.col1{
+	flex-basis: 25%;
+	padding: 10px;
+}
+.col1:nth-child(2), .col1:nth-child(3){
+	flex-basis: 15%;
+
+}
+.techstuff{
+	font-family: 'Poppins', sans-serif;
+	font-weight: bold;
+	font-size: 30px;
+	color:#ccc;
+	padding-top: 23%;
+}
+/*.logo{
+	width: 80px;
+	margin-bottom: 30px;
+}*/
+.col1 h3{
+	width: fit-content;
+	margin-bottom: 40px;
+	position: relative;
+	font-size: 20px;
+	line-height: 3%;
+}
+.email-id{
+	width: fit-content;
+	/* border-bottom: 1px solid #ccc; */
+}
+ul li{
+	list-style: none;
+	margin-bottom: 12px;
+}
+ul li a {
+	text-decoration: none;
+	color: #ffff;
+}
+
+.col1 form{
+	padding-bottom: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 50px;
+}
+.col1 form .far{
+	font-size: 18px;
+	margin-right: 10px;
+}
+.col1 form input{
+	width: 100%;
+	background: transparent;
+	color: #ccc;
+	border: 0;
+	outline: none;
+}
+.col1 form button{
+	background: transparent;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+}
+.col1 form button .fas{
+	font-size: 16px;
+	color:#ccc;
+}
+.social-icons .fab{
+	width: 40px;
+	height: 40px;
+	border-radius: 50px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 20px;
+	color:#000 ;
+	background: #fff;
+	margin-right: 15px;
+	cursor: pointer;
+}
+

@@ -1,14 +1,15 @@
 <div class="container">
 
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">View All</li>
-        </ol>
-      </nav>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/#product">Products</a></li>
+    <li class="breadcrumb-item active" aria-current="page">View All</li>
+    </ol>
+</nav>
 
     <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 py-1">
-         
+      
       <!--SMARTPHONES-->
       <%- include("./product", {name:"iPhone XS Max", image:"img/smartphone/phone.jpg", link:"/iPhone10"})%>
       <%- include("./product", {name:"iPhone 12 Pro Max", image:"img/smartphone/iphone 12 pro.png", link:"/iPhone12"})%>  
