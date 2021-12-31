@@ -5,7 +5,7 @@ function initialize(passport, getUserByEmail, getUserById) {
   const authenticateUser = async (email, password, done) => {
     const user = getUserByEmail(email);
     if (user == null) {
-      return done(null, false, { message: "User not Found" });
+      return done(null, false, { message: "Email incorrect" });
     }
     try {
       if (await bcrypt.compare(password, user.password)) {
