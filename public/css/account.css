@@ -1,3 +1,6 @@
+.profile{
+    border-radius: 100%;
+}
 
 .main-nav{
     background-color: lightskyblue;
@@ -150,7 +153,7 @@ html {
       line-height:28px;	
   }
   .ScriptHeader h1{
-      font-family: "brandon-grotesque", "Brandon Grotesque", "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", sans-serif;
+      font-family:"Poppins", sans-serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
       color: #6a4aed;
