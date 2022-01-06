@@ -1,50 +1,132 @@
 
-<div class="student-profile py-4">
+<div class="account py-4">
     <div class="container">
       <div class="row">
         <div class="col-lg-4">
-          <div class="card shadow-sm">
+          <!-- <div class="profile">
+            <img src="/img/griffin.jpg" class="profile-pic" alt="ProfileImage">
+            <input type="file" id="file">
+            <label for="file" id="uploadBtn">Choose Photo</label>
+              <div class="name">Griffin Aquino</div>
+              <div class="title">UI Designer</div>
+          </div> -->
+           <div class="card shadow-sm">
             <div class="card-header bg-transparent text-center">
-            <img src="/img/griffin.jpg" width="150" height="150" class="profile d-block mx-lg-auto img-fluid"  loading="lazy" alt="Profile">
+             - <div class="profile-pic">
+              <img src="/img/griffin.jpg" id="photo" class="profile d-block mx-lg-auto img-fluid"  loading="lazy" alt="Profile">
+              <input type="file" id="file">
+              <label for="file" id="uploadBtn"><i class="bi bi-camera-fill"></i></label>
             </div>
+            </div>
+
             <div class="card-body">
-              <p class="mb-0"> Angel</p>
-              <p class="mb-0"> Angelaiqueen</p>
-              <p class="mb-0"> Anecito</p>
+              <div class="name"> Angel Aquino </div>
+              <div class="title">UI Designer</div>
             </div>
           </div>
         </div>
 
 
         <div class="col-lg-8">
-          <div class="card shadow-sm">
+          <div class="CARD">
             <div class="card-header bg-transparent border-0">
-              <h3 class="mb-0"><i class="far fa-clone pr-1"></i>General Information</h3>
+              <h3 class="general-info">General Information</h3>
             </div>
             <div class="card-body pt-0">
-              <table class="table table-bordered">
-                <tr>
-                  <th width="30%">Phone Number	</th>
-                  <td width="2%">:</td>
-                  <td>1234567890</td>
-                </tr>
-                <tr>
-                  <th width="30%">Gender </th>
-                  <td width="2%">:</td>
-                  <td>Female</td>
-                </tr>
-                <tr>
-                  <th width="30%">Address </th>
-                  <td width="2%">:</td>
-                  <td>Malaybalay City, Bukidnon</td>
-                </tr>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
+
+              <form action="/register" method="POST">
+                <div class="user-details">
+                  <div class="input-box1">
+                    <label class="details"></span>
+                    <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+                  </div>
+                  <div class="input-box1">
+                    <label class="details"></span>
+                    <input type="text" id="middlename" name="middlename" placeholder="Middle Name" required>
+                  </div>
+                  <div class="input-box1">
+                    <label class="details"></span>
+                    <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
+                  </div>
+                  <div class="input-box2">
+                    <label class="details"></span>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                  </div>
+                  <div class="input-box2">
+                    <label class="details"></span>
+                    <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
+                  </div>
+                  <div class="input-box3">
+                    <label class="details"></span>
+                    <input type="text" id="street" name="street" placeholder="Street" required>
+                  </div>
+                  <div class="input-box3">
+                    <label class="details"></span>
+                    <input type="text" id="brgy" name="brgy" placeholder="Barangay" required>
+                  </div>
+                  <div class="input-box3">
+                    <label class="details"></span>
+                    <input type="text" id="mn" name="mn" placeholder="Municipality" required>
+                  </div>
+                  <div class="input-box3">
+                    <label class="details"></span>
+                    <input type="text" id="prov" name="prov" placeholder="Province" required>
+                  </div>
+                  <div class="input-box4">
+                    <label class="details"></span>
+                    <select id="gender" name="gender" class="details">
+                      <option selected>Select Gender</option>
+                      <option>Male</option>
+                      <option>Female</option>
+                    </select>
+                  </div>
+                  <div class="input-box4">
+                    <label class="details"></span>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                  </div>
+                </div> 
+                <form action="/logout?_method=DELETE", method="POST">
+                  <div class="button">
+                    <button class="logout btn-primary btn-dark align-items-center px-4 me-md-2" type="submit" id="logout" name="logout">Logout</button>
+                  </div>
+              </form>   
+              </form>
     </div>
-    <form action="/logout?_method=DELETE", method="POST">
-      <button type="submit" id="logout" name="logout">Log Out</button>
-  </form>
   </div> 
+
+  <script>
+    //declaring ejs elements
+    const imgDiv = document.querySelector('.profile-pic');
+    const img = document.querySelector('#photo');
+    const file = document.querySelector('#file');
+    const uploadBtn = document.querySelector('#uploadBtn')
+
+    //if user hover on profile-pic
+    imgDiv.addEventListener('mouseenter', function(){
+      uploadBtn.style.display = "block"
+    });
+
+    //if we hover out from photo
+    imgDiv.addEventListener('mouseleave', function(){
+      uploadBtn.style.display = "block";
+    });
+
+    //img showing functionality when choosing an image to upload
+    //when we choose an image to upload
+    file.addEventListener('change', function(){
+      //this refers to the file
+      const choosedFile = this.files[0];
+
+      if(choosedFile){
+        const reader = new FileReader();
+        //FileReader is a predefined function of JS
+
+        reader.addEventListener('load', function(){
+          img.setAttribute('src', reader.result);
+        });
+
+        reader.readAsDataURL(choosedFile);
+      }
+    });
+
+  </script>

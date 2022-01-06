@@ -51,6 +51,11 @@ exports.account = async (req, res) => {
 }
 };
 
+exports.profile = async (req, res) => {
+  res.render("profile", { title: "TechStuff" });
+};
+
+
 /**
  * GET /
  * Smartphones

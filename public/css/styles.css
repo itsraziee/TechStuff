@@ -93,10 +93,7 @@ footer{
 	color:#ccc;
 	padding-top: 23%;
 }
-/*.logo{
-	width: 80px;
-	margin-bottom: 30px;
-}*/
+
 .col1 h3{
 	width: fit-content;
 	margin-bottom: 40px;
@@ -106,7 +103,6 @@ footer{
 }
 .email-id{
 	width: fit-content;
-	/* border-bottom: 1px solid #ccc; */
 }
 ul li{
 	list-style: none;
