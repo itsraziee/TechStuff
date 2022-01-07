@@ -84,6 +84,7 @@ footer{
 }
 .col1:nth-child(2), .col1:nth-child(3){
 	flex-basis: 15%;
+	padding: 10px;
 
 }
 .techstuff{
@@ -108,10 +109,17 @@ ul li{
 	list-style: none;
 	margin-bottom: 12px;
 }
-ul li a {
+ ul li a {
 	text-decoration: none;
 	color: #ffff;
+	
 }
+
+.col1 h3 .underline ul li a{
+	text-decoration: none;
+	color: #ffff;
+	margin-left: -34px;
+} 
 
 .col1 form{
 	padding-bottom: 15px;
