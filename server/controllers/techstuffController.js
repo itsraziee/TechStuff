@@ -50,6 +50,10 @@ exports.account = async (req, res) => {
   }
 };
 
+exports.cart = async(req, res) => {
+  res.render("cart", {title: "Techstuff"})
+}
+
 exports.profile = async (req, res) => {
   res.render("profile", { title: "TechStuff" });
 };
