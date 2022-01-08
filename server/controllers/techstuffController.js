@@ -1,3 +1,4 @@
+
 /**
  * GET /
  * Homepage
@@ -61,6 +62,8 @@ exports.profile = async (req, res) => {
 exports.addProduct = async (req, res) => {
   res.render("addProduct", { title: "TechStuff" });
 };
+
+
 /**
  * GET /
  * Smartphones

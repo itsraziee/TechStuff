@@ -9,6 +9,7 @@ router.post("/", async (req, res) => {
     name: req.body.name,
     price: req.body.price,
     description: req.body.description,
+    category: req.body.category,
   });
   await product
     .save()
@@ -36,6 +37,7 @@ router.patch("/:id", async (req, res) => {
   product.description = req.body.description
     ? req.body.description
     : product.description;
+  product.category = req.body.category ? req.body.category : product.category;
 
   await product
     .save()
