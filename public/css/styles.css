@@ -84,6 +84,7 @@ footer{
 }
 .col1:nth-child(2), .col1:nth-child(3){
 	flex-basis: 15%;
+	padding: 10px;
 
 }
 .techstuff{
@@ -93,29 +94,30 @@ footer{
 	color:#ccc;
 	padding-top: 23%;
 }
-/*.logo{
-	width: 80px;
-	margin-bottom: 30px;
-}*/
+
 .col1 h3{
 	width: fit-content;
-	margin-bottom: 40px;
 	position: relative;
 	font-size: 20px;
 	line-height: 3%;
 }
 .email-id{
 	width: fit-content;
-	/* border-bottom: 1px solid #ccc; */
 }
-ul li{
-	list-style: none;
-	margin-bottom: 12px;
-}
-ul li a {
+
+.footer-link{
+	font-size: 14px;
+	line-height: 10px;
+	font-family: 'Poppins', sans-serif;
 	text-decoration: none;
 	color: #ffff;
+	width: fit-content;
 }
+.footer-link:hover{
+	color: #ccc;
+}
+
+
 
 .col1 form{
 	padding-bottom: 15px;

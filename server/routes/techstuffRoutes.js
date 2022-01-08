@@ -16,6 +16,9 @@ router.get("/account", techstuffController.account);
 router.get("/login", techstuffController.login);
 router.get("/register", techstuffController.register);
 
+router.get("/profile", techstuffController.profile);
+
+
 // SMARTPHONES
 router.get("/iPhone10", techstuffController.iPhone10);
 router.get("/iPhone12", techstuffController.iPhone12);
