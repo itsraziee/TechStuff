@@ -97,7 +97,6 @@ footer{
 
 .col1 h3{
 	width: fit-content;
-	margin-bottom: 40px;
 	position: relative;
 	font-size: 20px;
 	line-height: 3%;
@@ -105,21 +104,20 @@ footer{
 .email-id{
 	width: fit-content;
 }
-ul li{
-	list-style: none;
-	margin-bottom: 12px;
-}
- ul li a {
+
+.footer-link{
+	font-size: 14px;
+	line-height: 10px;
+	font-family: 'Poppins', sans-serif;
 	text-decoration: none;
 	color: #ffff;
-	
+	width: fit-content;
+}
+.footer-link:hover{
+	color: #ccc;
 }
 
-.col1 h3 .underline ul li a{
-	text-decoration: none;
-	color: #ffff;
-	margin-left: -34px;
-} 
+
 
 .col1 form{
 	padding-bottom: 15px;
