@@ -23,9 +23,19 @@ router.post("/", async (req, res) => {
 });
 
 //READ
+router.get("/category/:category", async (req, res) => {
+  const products = await Product.find({ category: req.params.category });
+  res.json(products);
+});
+
 router.get("/:id", async (req, res) => {
   const product = await Product.findById(req.params.id);
   res.json(product);
+});
+
+router.get("/", async (req, res) => {
+  const products = await Product.find({});
+  res.json(products);
 });
 
 //UPDATE

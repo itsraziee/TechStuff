@@ -1,4 +1,4 @@
-
+const axios = require("axios");
 /**
  * GET /
  * Homepage
@@ -8,23 +8,44 @@ exports.homepage = async (req, res) => {
 };
 
 exports.smartphone = async (req, res) => {
-  res.render("smartphone", { title: "TechStuff" });
+  await axios
+    .get("http://localhost:3000/API/product/category/smartphone")
+    .then((response) => {
+      res.render("smartphone", { title: "TechStuff", products: response.data });
+    });
 };
 
 exports.tablet = async (req, res) => {
-  res.render("tablet", { title: "TechStuff" });
+  await axios
+    .get("http://localhost:3000/API/product/category/tablet")
+    .then((response) => {
+      res.render("tablet", { title: "TechStuff", products: response.data });
+    });
 };
 
 exports.laptop = async (req, res) => {
-  res.render("laptop", { title: "TechStuff" });
+  await axios
+    .get("http://localhost:3000/API/product/category/laptop")
+    .then((response) => {
+      res.render("laptop", { title: "TechStuff", products: response.data });
+    });
 };
 
 exports.accessories = async (req, res) => {
-  res.render("accessories", { title: "TechStuff" });
+  await axios
+    .get("http://localhost:3000/API/product/category/accessories")
+    .then((response) => {
+      res.render("accessories", {
+        title: "TechStuff",
+        products: response.data,
+      });
+    });
 };
 
 exports.viewAll = async (req, res) => {
-  res.render("viewAll", { title: "TechStuff" });
+  await axios.get("http://localhost:3000/API/product").then((response) => {
+    res.render("viewAll", { title: "TechStuff", products: response.data });
+  });
 };
 
 exports.account = async (req, res) => {
@@ -62,7 +83,6 @@ exports.profile = async (req, res) => {
 exports.addProduct = async (req, res) => {
   res.render("addProduct", { title: "TechStuff" });
 };
-
 
 /**
  * GET /

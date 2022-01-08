@@ -27,6 +27,7 @@ router.get("/product/:id", async (req, res) => {
     .get(`http://localhost:3000/API/product/${req.params.id}`)
     .then((response) => {
       const product = response.data;
+      console.log(product.price.$numberDecimal);
       res.render("productPage", {
         title: "TechStuff",
         product: product,

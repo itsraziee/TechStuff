@@ -1,20 +1,20 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="/">Home</a></li>
-      <li class="breadcrumb-item"><a href= <%= category%>>Tablet</a></li>
+      <li class="breadcrumb-item"><a href= <%= category%>><%= product.category%></a></li>
       <li class="breadcrumb-item active" aria-current="page"><%= product.name  %> </li>
     </ol>
   </nav>
 <div class="row flex-lg-row-reverse align-items-center g-5 py-4 mb-4">
     <div class="col-12 col-lg-6">
-        <img src=<%= product.imageURL%>  width="427" height="300" class="d-block mx-lg-auto img-fluid" loading="lazy" alt="Techie">
+        <img src="<%= product.imageURL%>"  width="427" height="300" class="d-block mx-lg-auto img-fluid" loading="lazy" alt="Techie">
     </div>
 
     <div class="col-12 col-lg-6">
         <div class="infos">
 
             <h1 class="product-name"><%= product.name  %></h1>
-            <h3 class="price"><%= product.price  %></h3>
+            <h3 class="price">₱<%= product.price.$numberDecimal  %></h3>
             
         </div>
 
