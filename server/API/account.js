@@ -61,11 +61,11 @@ router.patch("/:id", async (req, res) => {
   await account
     .save()
     .then(() => {
-      console.log("Account created successfully.");
+      console.log("Account updated successfully.");
       res.json(account);
     })
     .catch((err) => {
-      console.log("Error creating account: " + err);
+      console.log("Error updating account: " + err);
     });
 });
 

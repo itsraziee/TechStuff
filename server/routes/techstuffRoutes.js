@@ -2,10 +2,12 @@ const express = require("express");
 const router = express.Router();
 const techstuffController = require("../controllers/techstuffController");
 const accountAPIRouter = require("../API/account");
+const productAPIRouter = require("../API/product");
 /**
  * App Routes
  */
 router.use("/API/account", accountAPIRouter);
+router.use("/API/product", productAPIRouter);
 
 router.get("/", techstuffController.homepage);
 router.get("/smartphone", techstuffController.smartphone);
@@ -18,6 +20,7 @@ router.get("/login", techstuffController.login);
 router.get("/register", techstuffController.register);
 router.get("/cart", techstuffController.cart);
 router.get("/profile", techstuffController.profile);
+router.get("/addProduct", techstuffController.addProduct);
 
 // SMARTPHONES
 router.get("/iPhone10", techstuffController.iPhone10);
