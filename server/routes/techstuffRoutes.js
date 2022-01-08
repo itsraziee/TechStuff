@@ -1,10 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const techstuffController = require("../controllers/techstuffController");
-
+const accountAPIRouter = require("../API/account");
 /**
  * App Routes
  */
+router.use("/API/account", accountAPIRouter);
 
 router.get("/", techstuffController.homepage);
 router.get("/smartphone", techstuffController.smartphone);
@@ -17,7 +18,6 @@ router.get("/login", techstuffController.login);
 router.get("/register", techstuffController.register);
 
 router.get("/profile", techstuffController.profile);
-
 
 // SMARTPHONES
 router.get("/iPhone10", techstuffController.iPhone10);

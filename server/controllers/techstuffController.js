@@ -1,4 +1,3 @@
-require("../models/database"); //database
 /**
  * GET /
  * Homepage
@@ -47,14 +46,13 @@ exports.account = async (req, res) => {
   if (req.isAuthenticated()) {
     res.render("account", { title: "TechStuff" });
   } else {
-  res.redirect("/login");
-}
+    res.redirect("/login");
+  }
 };
 
 exports.profile = async (req, res) => {
   res.render("profile", { title: "TechStuff" });
 };
-
 
 /**
  * GET /

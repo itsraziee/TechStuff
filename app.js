@@ -6,19 +6,46 @@ const flash = require("express-flash");
 const session = require("express-session");
 const methodOverride = require("method-override");
 const cookieParser = require("cookie-parser");
+const axios = require("axios");
+
+require("dotenv").config(); //storing database details
+
+const mongoose = require("mongoose");
+mongoose.connect(process.env.DATABASE_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", function () {
+  console.log("Connected");
+});
 
 const app = express();
 const port = process.env.PORT || 3000; //process.env.PORT is when you are uploading your code to somewhere
 const initializePassport = require("./server/controllers/passport-config");
 initializePassport(
   passport,
-  (email) => users.find((user) => user.email === email),
-  (id) => users.find((user) => user.id === id)
+  async (email) => {
+    var user = null;
+    await axios
+      .get(`http://localhost:3000/API/account/email/${email}`)
+      .then((response) => {
+        user = response.data;
+      });
+    return user;
+  },
+  async (id) => {
+    var user = null;
+    await axios
+      .get(`http://localhost:3000/API/account/id/${id}`)
+      .then((response) => {
+        user = response.data;
+      });
+    return user;
+  }
 );
-
-const users = [];
-
-require("dotenv").config(); //storing database details
 
 app.use(express.urlencoded({ extended: true }));
 app.use(flash());
@@ -34,6 +61,8 @@ app.use(passport.session());
 app.use(methodOverride("_method"));
 app.use(express.static("public"));
 app.use(expresLayouts);
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.set("layout", "./layouts/main");
 app.set("view engine", "ejs");
@@ -52,10 +81,9 @@ app.post(
 );
 
 app.post("/register", checkNotAuthenticated, async (req, res) => {
-  try {
-    const hashedPassword = await bcrypt.hash(req.body.password, 10);
-    users.push({
-      id: Date.now().toString(),
+  const hashedPassword = await bcrypt.hash(req.body.password, 10);
+  await axios
+    .post("http://localhost:3000/API/account", {
       firstname: req.body.firstname,
       middlename: req.body.middlename,
       lastname: req.body.lastname,
@@ -67,11 +95,14 @@ app.post("/register", checkNotAuthenticated, async (req, res) => {
       prov: req.body.prov,
       gender: req.body.gender,
       password: hashedPassword,
+    })
+    .then((response) => {
+      console.log(response.data);
+      res.redirect("/login");
+    })
+    .catch((err) => {
+      console.log(err);
     });
-    res.redirect("/login");
-  } catch {
-    res.redirect("/register");
-  }
 });
 
 //LOGOUT
@@ -94,6 +125,6 @@ function checkNotAuthenticated(req, res, next) {
   }
   next();
 }
- 
+
 app.listen(port, () => console.log(`Listening to port ${port}`));
 //app.listen(3000);
