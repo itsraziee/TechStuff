@@ -16,7 +16,7 @@ router.get("/viewAll", techstuffController.viewAll);
 router.get("/account", techstuffController.account);
 router.get("/login", techstuffController.login);
 router.get("/register", techstuffController.register);
-
+router.get("/cart", techstuffController.cart);
 router.get("/profile", techstuffController.profile);
 
 // SMARTPHONES
