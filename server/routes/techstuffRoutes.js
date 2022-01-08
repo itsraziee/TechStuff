@@ -35,6 +35,10 @@ router.get("/product/:id", async (req, res) => {
       });
     });
 });
+router.delete("/logout", (req, res) => {
+  req.logout();
+  res.redirect("/login");
+});
 
 // SMARTPHONES
 router.get("/iPhone10", techstuffController.iPhone10);

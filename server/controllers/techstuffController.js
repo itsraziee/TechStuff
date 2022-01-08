@@ -48,10 +48,6 @@ exports.viewAll = async (req, res) => {
   });
 };
 
-exports.account = async (req, res) => {
-  res.render("account", { title: "TechStuff" });
-};
-
 exports.register = async (req, res) => {
   res.render("register", { title: "TechStuff" });
 };
@@ -66,7 +62,7 @@ exports.login = async (req, res) => {
 
 exports.account = async (req, res) => {
   if (req.isAuthenticated()) {
-    res.render("account", { title: "TechStuff" });
+    res.render("account", { title: "TechStuff", account: req.user });
   } else {
     res.redirect("/login");
   }

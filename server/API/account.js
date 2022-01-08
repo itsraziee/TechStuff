@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Account = require("../models/account");
+const bcrypt = require("bcrypt");
 
 //CREATE
 router.post("/", async (req, res) => {
@@ -56,7 +57,9 @@ router.patch("/:id", async (req, res) => {
   account.mn = req.body.mn ? req.body.mn : account.mn;
   account.prov = req.body.prov ? req.body.prov : account.prov;
   account.gender = req.body.gender ? req.body.gender : account.gender;
-  account.password = req.body.password ? req.body.password : account.password;
+  account.password = req.body.password
+    ? await bcrypt.hash(req.body.password, 10)
+    : account.password;
 
   await account
     .save()
