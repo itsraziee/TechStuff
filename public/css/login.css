@@ -1,61 +1,58 @@
-:root{
-    --bs-font-sans-serif: 'Rubik', sans-serif;
-    --bs-font-sans-serif: 'Albra', sans-serif;
+:root {
+  --bs-font-sans-serif: "Rubik", sans-serif;
+  --bs-font-sans-serif: "Albra", sans-serif;
 }
 
-.SIGNIN{
-    font-family: 'Albra', sans-serif;
-    text-align: center;
-    padding-top: 10%;
-    font-weight: bold;
-}
-.email-add{ 
-    justify-content: center;
-    padding-left: 30%; 
-    width: 5vw;
-}
-.pin{
-    justify-content: center;
-    padding-left: 30%;
-}
-.gmail { 
-    font-family: 'Poppins', sans-serif;
-    border-radius: 0;
-    height:40px;
-    padding-left: 3% ;
-    justify-content: center;
-   
-}
-.password{
-    font-family: 'Poppins', sans-serif;
-    border-radius: 0;
-    height:40px;
-    padding-left: 3% ;
-    justify-content: center;
-}
-.sub{
-    justify-content: center;
-    padding-left: 40%;
-    border-color: none;
-
-}
-.submit{
-    font-family: 'Poppins', sans-serif;
-    justify-content: center;
-    padding:5px 5px 5px 5px;
-    width:10vw;
-    height:40px;
-    border: none;
-    border-radius: 0;
-   
-}
-.dont-have-an-account{
-    font-family: 'Poppins', sans-serif;
-    padding-left: 35%;
-    font-size: 1rem;
+.SIGNIN {
+  font-family: "Albra", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 55px 10px 10px;
 }
 
-.sign-in{
-    margin-top: 10%;
-    padding-left: 5%;
+.email-add {
+  justify-content: center;
+  padding-left: 30%;
+  width: 5vw;
+}
+.pin {
+  justify-content: center;
+  padding-left: 30%;
+}
+.gmail {
+  font-family: "Poppins", sans-serif;
+  border-radius: 0;
+  height: 40px;
+  padding-left: 3%;
+  justify-content: center;
+}
+.password {
+  font-family: "Poppins", sans-serif;
+  border-radius: 0;
+  height: 40px;
+  padding-left: 3%;
+  justify-content: center;
+}
+.sub {
+  justify-content: center;
+  padding-left: 40%;
+  border-color: none;
+}
+.submit {
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+  padding: 5px 5px 5px 5px;
+  height: 40px;
+  border: none;
+  border-radius: 0;
+}
+.dont-have-an-account {
+  font-family: "Poppins", sans-serif;
+  padding-left: 35%;
+  font-size: 1rem;
+}
+
+.sign-in {
+  margin-top: 10%;
+  padding-left: 5%;
 }
