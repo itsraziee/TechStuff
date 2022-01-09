@@ -10,6 +10,7 @@ const axios = require("axios");
 
 require("dotenv").config(); //storing database details
 
+//Database
 const mongoose = require("mongoose");
 mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
@@ -24,6 +25,8 @@ db.once("open", function () {
 
 const app = express();
 const port = process.env.PORT || 3000; //process.env.PORT is when you are uploading your code to somewhere
+
+//for login
 const initializePassport = require("./server/controllers/passport-config");
 initializePassport(
   passport,
@@ -70,6 +73,7 @@ app.set("view engine", "ejs");
 const routes = require("./server/routes/techstuffRoutes.js");
 app.use("/", routes);
 
+//Sign-in
 app.post(
   "/login",
   checkNotAuthenticated,
@@ -80,6 +84,7 @@ app.post(
   })
 );
 
+//Sign-up
 app.post("/register", checkNotAuthenticated, async (req, res) => {
   const hashedPassword = await bcrypt.hash(req.body.password, 10);
   await axios
@@ -127,4 +132,4 @@ function checkNotAuthenticated(req, res, next) {
 }
 
 app.listen(port, () => console.log(`Listening to port ${port}`));
-//app.listen(3000);
+
