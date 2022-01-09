@@ -1,8 +1,5 @@
 const axios = require("axios");
-/**
- * GET /
- * Homepage
- */
+
 exports.homepage = async (req, res) => {
   res.render("index", { title: "TechStuff" });
 };
@@ -79,4 +76,3 @@ exports.profile = async (req, res) => {
 exports.addProduct = async (req, res) => {
   res.render("addProduct", { title: "TechStuff" });
 };
-
