@@ -14,7 +14,7 @@ th {
   text-align: left;
   padding: 5px;
   color: #fff;
-  background: #ff523b;
+  background: #727070;
   font-weight: normal;
 }
 
@@ -33,7 +33,7 @@ td input {
 }
 
 td a {
-  color: #ff523b;
+  color: #727070;
   font-size: 12px;
 }
 
@@ -44,7 +44,7 @@ td img {
 }
 
 .total-price {
-  border-top: 3px solid #ff523b;
+  border-top: 3px solid #727070;
 }
 td:last-child {
   text-align: end;
