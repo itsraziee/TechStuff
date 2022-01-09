@@ -6,7 +6,6 @@
     padding: 20px;
     border-radius: 5px;
 }
-
 .CARD {
     font-family: 'Poppins', sans-serif;
     text-align:center;
@@ -15,20 +14,6 @@
     padding: 10px;
     border-radius: 5px;
 }
-
-/* ----PICTURE----- */
-/* .card-header .profile-pic{
-    height: 150px;
-    width: 150px;
-    position: absolute;
-    top: 180%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid grey;
-
-} */
 .name{
     font-weight: bold;
 }
@@ -39,13 +24,8 @@
     border-radius: 50%;
     margin: 0 auto 20px auto;
     border: 3px solid grey;
-    overflow: hidden;
-    
+    overflow: hidden;  
 }
-/* #photo{
-    height: 100%;
-    width: 100%;
-} */
 #file{
     display: none;
 }
@@ -65,10 +45,7 @@
     cursor: pointer;
     display: none;
 }
-
-/* ---ANGEL ANECITO
-       & GENERAL INFORMATION--- */
-
+/* ---USER PROFILE--- */
 .name{
     text-align: center;
     font-size: 1.1rem;
@@ -81,8 +58,7 @@
     font-weight: 700;
     padding-top: 5%;
 }
-/* -----LGOUT BUTTON----- */
-
+/* -----LOGOUT BUTTON----- */
  form .logout {
  height: 45px;
  margin: 5px 0;
