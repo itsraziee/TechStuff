@@ -1,14 +1,26 @@
-<form action="/API/product" method="POST">
-    <input type="text" name="imageURL" placeholder="ImageURL" class="imageURL" required/>
-    <input type="text" name="name" placeholder="Product name" class="productName" required/>
-    <input type="text" name="price" placeholder="Price" class="price" required/>
-    <input type="text" name="description" placeholder="Description" class="description" required/>
-    <select name="category" required>
-        <option value="" selected hidden>Select Category</option>
-        <option value="smartphone">Smartphone</option>
-        <option value="tablet">Tablet</option>
-        <option value="laptop">Laptop</option>
-        <option value="accessories">Accessories</option>
-    </select>
-    <button type="submit" class="submit">Add Product</button>
-</form>
+<body style="background: #f4f4f5;">
+    <div class="addProduct">
+        <img src="/img/Saly7.png" class="Saly-7">
+        <div class="productCont1">
+            <strong class="addProductHere">Add Product Here!</strong>
+            <form action="/API/product" method="POST">
+                <input type="text" name="imageURL" placeholder="ImageURL" class="form-control" required/>
+                <input type="text" name="name" placeholder="Product name" class="form-control" required/>
+                <input type="text" name="price" placeholder="Price" class="form-control" required/>
+                <input type="text" name="description" placeholder="Description" class="form-control">
+                <select class="category form-select form-select" aria-label=" Category">
+                    <option selected>Select Category</option>
+                    <option value="1">Smartphone</option>
+                    <option value="2">Tablet</option>
+                    <option value="3">Laptop</option>
+                    <option value="3">Accesories</option>
+                  </select>
+
+                <button type="submit" class="submit btn btn-primary" style="background-color: #333 ">Add Product</button>
+            </form>
+                <!-- <img class="photo" src="addProduct.jpg" alt=""> -->
+        </div>
+    </div>
+
+    
+</body>

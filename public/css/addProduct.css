@@ -1,0 +1,44 @@
+.addProduct {
+  width: 50%;
+  padding-left: 10%;
+  padding-top: 5%;
+}
+
+.productCont1 {
+  width: 100%;
+  background: #fff;
+  opacity: 80%;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  padding: 5% 10% 5% 10%;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.addProductHere {
+  text-align: center;
+  color: #333;
+  font-size: 1.2rem;
+}
+.form-control {
+  margin-top: 4%;
+}
+
+.category {
+  margin-top: 5%;
+  height: 50%;
+  width: 50%;
+}
+.submit {
+  display: block;
+  margin-top: 5%;
+  width: 30%;
+  border: none;
+}
+
+.Saly-7 {
+  align-items: right;
+  position: absolute;
+  margin-left: 35%;
+  height: 93.2%;
+  margin-top: -8%;
+}
